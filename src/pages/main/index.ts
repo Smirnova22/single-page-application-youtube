@@ -2,7 +2,7 @@ import Page from '../../core/templates/page';
 
 class MainPage extends Page {
   static TextObject = {
-    MainTitle: 'Main Page',
+    MainTitle: 'Welcome to RSS Puzzle',
   };
 
   constructor(id: string) {
