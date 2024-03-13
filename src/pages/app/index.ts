@@ -4,6 +4,7 @@ import SettingsPage from '../settings';
 import StatisticsPage from '../statistics';
 import Header from '../../core/components/header';
 import ErrorPage, { ErrorTypes } from '../error';
+import InputCreator from '../../core/components/input';
 
 export const enum PageIds {
   MainPage = 'main-page',
@@ -15,6 +16,7 @@ class App {
   private static container: HTMLElement = document.body;
   private static defaultPageId: string = 'current-page';
   private header: Header;
+  private inputCreator: InputCreator;
 
   static renderNewPage(idPage: string) {
     const currentPageHTML = document.querySelector(`#${App.defaultPageId}`);
@@ -49,6 +51,7 @@ class App {
 
   constructor() {
     this.header = new Header('header', 'header-container');
+    this.inputCreator = new InputCreator();
   }
 
   run() {
@@ -58,6 +61,5 @@ class App {
   }
 }
 
-// Main, Settings, Statistics
 
 export default App;
